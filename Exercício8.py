@@ -7,6 +7,8 @@ for i in range(10):
 
 busca = int(input("\n Informe um valor pra ser procurado: "))
 
+list.sort()
+
 for j in list:
     if(busca == list[j]):
         achou = achou + 1

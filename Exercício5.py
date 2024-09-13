@@ -29,6 +29,7 @@ while codigo > 0:
     
     if valorcalculoIR <= 1903.98:
         print("\nValor do IR: R$ 0,0 .\nSalário liquido sem dedução por dependente: R$ %.2f", valorfinal)
+    
     elif valorcalculoIR >= 1903.99 and valorcalculoIR <=2826.65:
         valorimposto = (valorcalculoIR*0.075) - 142.80
         valorfinal = valorfinal - valorimposto

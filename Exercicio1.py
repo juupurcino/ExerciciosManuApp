@@ -1,135 +1,32 @@
-dep, x, salB, salL, salIR, valorINSS, valorIR, somaINSS, somaIR = 0
+def soma(num1, num2):
+    return round(num1 + num2)
 
-cod = int(input("Digite o código do funcionário: "))
+def sub(num1, num2):
+    return round(num1 - num2)
 
-while cod != 0:
-    dep = int(input("Digite o número de dependentes: "))
+def div(num1, num2):
+    return round(num1/num2)
 
-    for i inr 
+def mult(num1, num2):
+    return round(num1*num2)
 
-    for(x=0; x<12; x++){
-    printf("Digite o %d° Salario Bruto= ", x+1);
-    scanf("%f", &salB);
+
+op = input("INFORME QUAL OPERAÇÃO DESEJA REALIZAR\nS - SOMA / U - SUBTRAÇÃO / X - MULTIPLICAÇÃO / D - DIVISÃO\nOu digite # para sair do sistema\n")
+
+while op != "#":
     
     
-        
-           if(salB<=1399.12){
-              valorINSS = salB * 0.08;
-              somaINSS = somaINSS + valorINSS;
-              salL = salB - (salB * 0.08);
-           
-           }else if(salB<=2331.88){
-              valorINSS = salB * 0.09;
-              somaINSS = somaINSS + valorINSS;
-              salL = salB - (salB * 0.09);
-                            
-           }else if(salB<=4663.75){
-              valorINSS = salB * 0.11;
-              somaINSS = somaINSS + valorINSS;
-              salL = salB - (salB * 0.11);
-                           
-           } else {
-              valorINSS = 513.01;
-              somaINSS = somaINSS + valorINSS;
-              salL = salB - (513.01); 
-           }
-    
-   
-    
-            if(dep >= 1){
-               salIR = salL - (dep * 189.59);           
-               
-                
-               
-               if(salIR <= 1903.98){
-                   valorIR = 0;
-                   somaIR = somaIR + valorIR;
-                   
-               } else if (salIR <= 2826.65){
-                   valorIR = ((salIR * 0.075) - 142.80);
-                   somaIR = somaIR + valorIR;
-                   
-               } else if (salIR <= 3751.05){
-                   valorIR = ((salIR * 0.15) - 354.80);
-                   somaIR = somaIR + valorIR;
-                   
-               } else if (salIR <=4664.68){
-                   valorIR = ((salIR * 0.225) - 636.13);
-                   somaIR = somaIR + valorIR;
-                   
-               } else {
-                   valorIR = ((salIR * 0.275) - 869.36);
-                   somaIR = somaIR + valorIR;
-               }
-                   
-            } else { 
-                salIR = salL;
-                
-                if(salIR <= 1903.98){
-                   valorIR = 0;
-                   somaIR = somaIR + valorIR;
-                   
-               } else if (salIR <= 2826.65){
-                   valorIR = ((salIR * 0.075) - 142.80);
-                   somaIR = somaIR + valorIR;
-                   
-               } else if (salIR <= 3751.05){
-                   valorIR = ((salIR * 0.15) - 354.80);
-                   somaIR = somaIR + valorIR;
-                   
-               } else if (salIR <=4664.68){
-                   valorIR = ((salIR * 0.225) - 636.13);
-                   somaIR = somaIR + valorIR;
-                   
-               } else {
-                   valorIR = ((salIR * 0.275) - 869.36);
-                   somaIR = somaIR + valorIR;
-               }
-               
-                
-            }
-                 
-      
-            if(salB<=1399.12){
-              salL = (salL - valorIR);
-              printf("Salario Liquido= %.2f\n", salL);
-              printf("Valor INSS= %.2f\n", valorINSS);
-              printf("Valor IR= %.2f\n\n", valorIR);
-              
-              
-           
-           }else if(salB<=2331.88){
-              salL = (salL - valorIR);
-              printf("Salario Liquido= %.2f\n", salL);
-              printf("Valor INSS= %.2f\n", valorINSS);
-              printf("Valor IR= %.2f\n\n", valorIR);
-             
-                            
-           }else if(salB<=4663.75){
-              salL = (salL - valorIR);
-              printf("Salario Liquido= %.2f\n", salL);
-              printf("Valor INSS= %.2f\n", valorINSS);
-              printf("Valor IR= %.2f\n\n", valorIR);
-             
-                           
-           } else {
-              salL = (salL - valorIR); 
-              printf("Salario Liquido= %.2f\n", salL);
-              printf("Valor INSS= %.2f\n", valorINSS);
-              printf("Valor IR= %.2f\n\n", valorIR);
-           }  
-    
-    } 
-    
-    printf("Funcionário: %d\n", cod);
-    printf("Valor no ano a pagar de INSS= %.2f\n", somaINSS);
-    printf("Valor no ano a pagar de IR= %.2f\n\n", somaIR);
-    
-    printf("Digite o código do funcionário: ");
-    scanf("%d", &cod);
-    printf("\n");
-}
-    
-    return (0);
-    system("pause");
-}
+    num1 = float(input("Digite o primeiro número: "))
+    num2 = float(input("Digite o segundo número: "))
+
+    match op:
+        case "S":
+            print("Soma: ", soma(num1, num2))
+        case "U":
+            print("Subtração: ", sub(num1, num2))
+        case "X":
+            print("Multiplicação: ", mult(num1, num2))
+        case "D":
+            print("Divisão: ", div(num1, num2))
+
+    op = input("INFORME QUAL OPERAÇÃO DESEJA REALIZAR\nS - SOMA / U - SUBTRAÇÃO / X - MULTIPLICAÇÃO / D - DIVISÃO\nOu digite # para sair do sistema\n")

@@ -7,8 +7,7 @@ resp = resp - debitos
 
 if resp > 0:
         print(f"Saldo Positivo em R${resp}")
-else:
-    if resp < 0:
+elif resp < 0:
         print(f"Saldo Negativo em R${resp}")
-    else:
+else:
         print("Saldo zerado")
